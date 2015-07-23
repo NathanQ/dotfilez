@@ -1,0 +1,33 @@
+[user]
+        name = Nathan Victor
+        email = nathanqvictor@gmail.com
+
+[color]
+        status = auto
+        branch = auto
+        diff = auto
+        ui = auto
+
+[core]
+        editor = /usr/bin/vim
+        excludesfile = /Users/nathanvictor/.gitignore_global
+
+[difftool "sourcetree"]
+        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+        path =
+
+[mergetool "sourcetree"]
+        cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+        trustExitCode = true
+
+[credential]
+        helper = netrc -f ~/.netrc.asc -v
+
+[filter "lfs"]
+        clean = git-lfs clean %f
+        smudge = git-lfs smudge %f
+        required = true
+
+[alias]
+        unfuck = !git fsck && git remote prune origin && git gc
+        today = !git all --since='12am' --committer=\"`git me`\"

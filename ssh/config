@@ -1,0 +1,15 @@
+#personal nathanqvictor account
+Host github-personal.com
+        HostName github.com
+        User git
+        IdentityFile ~/.ssh/id_rsa_personal
+
+Host heroku.com
+        HostName heroku.com
+        User git
+        IdentityFile ~/.ssh/id_rsa_personal
+
+Host bitbucket.org
+        HostName bitbucket.org
+        User git
+        IdentityFile ~/.ssh/id_rsa_personal
